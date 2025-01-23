@@ -29,11 +29,7 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    var StatusLogin = storage.getItem('StatusLogin');
-    if(StatusLogin =='1'){
-       print('Async done');
-       //navigateToSubPage(context);
-    }
+   
   Future navigateToSubPage(context) async {
           Navigator.push(
                   context,
@@ -45,7 +41,11 @@ class _LoginState extends State<Login> {
     }
     Future.delayed(Duration(seconds:1), (){
       print("Wait for 1 seconds");
+       var StatusLogin = storage.getItem('StatusLogin');
+    if(StatusLogin =='1'){
       navigateToSubPage(context);
+    }
+     
     });
       return Scaffold(
       key: context.read<MenuAppController>().scaffoldKey,
