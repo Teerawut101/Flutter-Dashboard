@@ -21,7 +21,7 @@ class StorageDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Storage Details",
+            "Steam flow boiler",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
@@ -31,26 +31,26 @@ class StorageDetails extends StatelessWidget {
           Chart(),
           StorageInfoCard(
             svgSrc: "assets/icons/Documents.svg",
-            title: "Documents Files",
-            amountOfFiles: "1.3GB",
+            title: "Boiler A",
+            amountOfFiles: "14.3 Ton/Hr",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/media.svg",
-            title: "Media Files",
-            amountOfFiles: "15.3GB",
+            title: "Boiler B",
+            amountOfFiles: "16.3 Ton/Hr",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/folder.svg",
-            title: "Other Files",
-            amountOfFiles: "1.3GB",
+            title: "Boiler B",
+            amountOfFiles: "12.3 Ton/Hr",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/unknown.svg",
-            title: "Unknown",
-            amountOfFiles: "1.3GB",
+            title: "Boiler C",
+            amountOfFiles: "10.3 Ton/Hr",
             numOfFiles: 140,
           ),
         ],

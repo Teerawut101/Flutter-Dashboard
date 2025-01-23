@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
                   ),
             );
     }
-    Future.delayed(Duration(seconds:1), (){
+    Future.delayed(Duration(seconds:0), (){
       print("Wait for 1 seconds");
        var StatusLogin = storage.getItem('StatusLogin');
     if(StatusLogin =='1'){
@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
           child: Center(
             child: Column(
               children: [
-                SizedBox(height: 100.spMin),
+                SizedBox(height: 50.spMin),
                 _buildUserNameTextField(),
                 SizedBox(height: 20.spMin),
                 _buildPasswordTextField(),

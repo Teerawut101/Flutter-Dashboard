@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
@@ -15,15 +16,17 @@ class SideMenu extends StatelessWidget {
             child: Image.asset("assets/images/logo.png"),
           ),
           DrawerListTile(
-            title: "Dashboard",
+            title: "Main Dashboard",
             svgSrc: "assets/icons/menu_dashboard.svg",
-            press: () {},
+            press: () {
+            },
           ),
           DrawerListTile(
-            title: "Transaction",
+            title: "Boiler Monitor",
             svgSrc: "assets/icons/menu_tran.svg",
             press: () {},
-          ),
+          )
+          /*,
           DrawerListTile(
             title: "Task",
             svgSrc: "assets/icons/menu_task.svg",
@@ -54,6 +57,7 @@ class SideMenu extends StatelessWidget {
             svgSrc: "assets/icons/menu_setting.svg",
             press: () {},
           ),
+          */
         ],
       ),
     );
