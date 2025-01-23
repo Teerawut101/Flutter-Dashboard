@@ -1,16 +1,16 @@
 import 'package:admin/controllers/menu_app_controller.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:localstorage/localstorage.dart';
 import 'package:provider/provider.dart';
+
 
 import '../../../constants.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
-
+  const Header({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        Expanded(child: SearchField()),
+        //Expanded(child: SearchField()),
         ProfileCard()
       ],
     );
@@ -35,10 +35,8 @@ class Header extends StatelessWidget {
 }
 
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({
-    Key? key,
-  }) : super(key: key);
-
+ // const ProfileCard({Key? key,}) : super(key: key);
+  final storage = new LocalStorage('AppLK');
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,9 +60,28 @@ class ProfileCard extends StatelessWidget {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-              child: Text("Angelina Jolie"),
+              child: Text(storage.getItem('UserLogin')),
             ),
-          Icon(Icons.keyboard_arrow_down),
+          //Icon(Icons.logout),
+           // Creating a icon button
+          IconButton(
+            //iconSize: 100,
+            icon: const Icon(
+              Icons.logout,
+            ),
+            // the method which is called
+            // when button is pressed
+            onPressed: () {
+                  storage.setItem('StatusLogin','0');
+                  Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ChangeNotifierProvider(
+                        create: (context) => MenuAppController(), child: Login()),
+                  ),
+                   );
+            },
+          ),
         ],
       ),
     );

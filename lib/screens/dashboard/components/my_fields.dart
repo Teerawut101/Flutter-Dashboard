@@ -22,6 +22,7 @@ class MyFiles extends StatelessWidget {
               "My Files",
               style: Theme.of(context).textTheme.titleMedium,
             ),
+            /*
             ElevatedButton.icon(
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(
@@ -34,6 +35,7 @@ class MyFiles extends StatelessWidget {
               icon: Icon(Icons.add),
               label: Text("Add New"),
             ),
+            */
           ],
         ),
         SizedBox(height: defaultPadding),
