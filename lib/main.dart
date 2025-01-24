@@ -10,9 +10,6 @@ import 'package:localstorage/localstorage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:admin/screens/main/components/side_menu.dart';
 import 'package:admin/screens/main/main_screen.dart';
-
-import '../../controllers/menu_app_controller.dart';
-
 void main() {
   runApp(MyApp());
 }

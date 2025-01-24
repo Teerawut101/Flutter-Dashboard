@@ -18,8 +18,7 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Main Dashboard",
             svgSrc: "assets/icons/menu_dashboard.svg",
-            press: () {
-            },
+            press: () { },
           ),
           DrawerListTile(
             title: "Boiler Monitor",
